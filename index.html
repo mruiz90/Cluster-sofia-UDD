@@ -79,6 +79,24 @@
 				grid-column: span 2 / auto;
 			  }
 			}
+			* {
+				box-sizing: border-box;
+			  }
+			  
+			  /* Create two equal columns that floats next to each other */
+			  .column {
+				float: left;
+				width: 50%;
+				padding: 10px;
+				height: 300px; /* Should be removed. Only for demonstration */
+			  }
+			  
+			  /* Clear floats after the columns */
+			  .row:after {
+				content: "";
+				display: table;
+				clear: both;
+			  }
 		</style>
 	<link rel="stylesheet" id="wp-block-library-css" href="./Las caras del ICIM - ICIM_files/style.min.css" type="text/css" media="all">
 <link rel="stylesheet" id="css_content-css" href="./Las caras del ICIM - ICIM_files/contenido.css" type="text/css" media="all">
@@ -285,12 +303,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<p style="text-align:center;">En el ICIM poseemos la infraestructura computacional necesaria para satisfacer las necesidades de análisis por parte de nuestros investigadores y colaboradores. Siguiendo las corrientes actuales de cómputo a nivel mundial, Sofía (del Griego “sabiduría”, FONDEQUIP EQM150093), ha cambiado de una arquitectura de cluster, a una basada en máquinas virtuales (VM), delegando al usuario la elección del hardware que más se adapte a sus necesidades, así como la administración total del software y usuarios requeridos.</p>
 	
 	<div class="image-mosaic">
-		<div class="card card-tall" style="background-image: Cluster-sofia-UDD/WhatsApp Image 2022-06-08 at 5.12.32 PM.jpeg"></div>
-		<div class="card card-tall" style="background-image: Cluster-sofia-UDD/WhatsApp Image 2022-06-08 at 5.12.34 PM (1).jpeg"></div>
-		<div class="card card-tall" style="background-image: Cluster-sofia-UDD/WhatsApp Image 2022-06-08 at 5.12.34 PM.jpeg"></div>
+		<div class="card card-tall" style="background-image: url(Cluster-sofia-UDD/WhatsApp Image 2022-06-08 at 5.12.32 PM.jpeg)"></div>
+		<div class="card card-tall" style="background-image: url(Cluster-sofia-UDD/WhatsApp Image 2022-06-08 at 5.12.34 PM (1).jpeg)"></div>
+		<div class="card card-tall" style="background-image: url(Cluster-sofia-UDD/WhatsApp Image 2022-06-08 at 5.12.34 PM.jpeg)"></div>
 	</div>
 	<br>
 	<br>
+
+	<div class="row">
+	  <div class="column" style="background-color:#aaa;">
+		<h2>Column 1</h2>
+		<p>Some text..</p>
+	  </div>
+	  <div class="column" style="background-color:#bbb;">
+		<h2>Column 2</h2>
+		<p>Some text..</p>
+	  </div>
+	</div>
 
 	<center>
 	<table border="1" cellspacing="5" bgcolor="white">
@@ -479,3 +508,4 @@ d)};return function(){var h=new Date;g||(g=h);var k=f-(h-g);c=this;d=arguments;0
 <noscript>
 <img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=44764&amp;fmt=gif">
 </noscript></html>
+
